@@ -1,0 +1,19 @@
+.anchor-pane-border{
+    -fx-border-color: #eee;
+    -fx-border-width: 3px;
+    -fx-border-radius: 10px;
+}
+
+.anchor-textfield{
+    -fx-border-color: #eee;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px;
+    -fx-background-radius: 10px;
+}
+
+.anchor-button{
+    -fx-border-radius: 5px;
+    -fx-background-image: url("images/pos.jpg");
+    
+}

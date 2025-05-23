@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="600.0" style="-fx-background-color: #7dff7f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFxmlController">
+   <children>
+      <Pane layoutX="-5.0" layoutY="-4.0" prefHeight="546.0" prefWidth="266.0" style="-fx-background-color: white; -fx-background-radius: 0;">
+         <children>
+            <ImageView fitHeight="218.0" fitWidth="268.0" layoutX="13.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/10132661%20(3).jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="235.0" prefHeight="118.0" prefWidth="231.0" text="Welcome to Jolly Rush" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="39.0" />
+               </font>
+              
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="247.0" layoutY="-2.0" prefHeight="546.0" prefWidth="352.0" style="-fx-background-color: #94ff75; -fx-background-radius: 30px;">
+         <children>
+            <Label layoutX="116.0" layoutY="54.0" prefHeight="39.0" prefWidth="121.0" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="AdobeHebrew-Bold" size="31.0" />
+               </font>
+            </Label>
+            <GridPane layoutY="158.0" prefHeight="317.0" prefWidth="352.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.20001220703125" minWidth="10.0" prefWidth="111.4000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="162.5999755859375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="22.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="User Type" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="22.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Password" textFill="#fcf9f9" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Rockwell" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="22.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtUsername" prefHeight="34.0" prefWidth="172.0" style="-fx-background-radius: 20px;" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     
+                  </TextField>
+                  <RadioButton fx:id="rdAdmin" mnemonicParsing="false" text="Admin" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rdusertype" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdStaff" mnemonicParsing="false" text="Staff" toggleGroup="$rdusertype" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="80.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <TextField fx:id="txtPassword" prefHeight="34.0" prefWidth="152.0" style="-fx-background-radius: 20px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="btnLogin" alignment="CENTER" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="37.0" prefWidth="78.0" style="-fx-background-radius: 10px; -fx-background-color: slateblue;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="80.0" right="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Label layoutX="225.0" layoutY="509.0" text="©Copyright by JollyRush.CO">
+         </Label>
+   </children>
+</AnchorPane>

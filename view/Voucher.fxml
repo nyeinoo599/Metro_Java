@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vPane" prefHeight="532.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VoucherController">
+   <children>
+      <TableView fx:id="tableView" layoutX="58.0" layoutY="149.0" prefHeight="209.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="vName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="vSize" prefWidth="75.0" text="Size" />
+            <TableColumn fx:id="vPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="vQty" prefWidth="75.0" text="Qty" />
+            <TableColumn fx:id="vAmount" prefWidth="97.0" text="Amount" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="56.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pepsi.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="170.0" layoutY="36.0" prefHeight="43.0" prefWidth="190.0" text="Point of Sale">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="104.0" prefHeight="30.0" prefWidth="63.0" text="Slip No: " />
+      <Label fx:id="lblSlip" layoutX="124.0" layoutY="105.0" prefHeight="30.0" prefWidth="63.0" text="001" />
+      <Label layoutX="337.0" layoutY="96.0" prefHeight="30.0" prefWidth="71.0" text="Date: " />
+      <Label fx:id="lblDate" layoutX="378.0" layoutY="92.0" prefHeight="38.0" prefWidth="83.0" text="2025-05-22" />
+      <Label layoutX="321.0" layoutY="370.0" prefHeight="30.0" prefWidth="71.0" text="Total" />
+      <Label layoutX="324.0" layoutY="411.0" prefHeight="30.0" prefWidth="54.0" text="Receive" />
+      <Label layoutX="322.0" layoutY="449.0" prefHeight="30.0" prefWidth="63.0" text="Change" />
+      <Button fx:id="vPrint" layoutX="139.0" layoutY="483.0" mnemonicParsing="false" onAction="#handlePrintAction" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: slateblue;" text="Print" textFill="#fcf8f8" />
+      <Button fx:id="vBack" layoutX="58.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: slateblue;" text="Back" textFill="#f5f2f2" />
+      <Label fx:id="vTotal" layoutX="403.0" layoutY="370.0" prefHeight="31.0" prefWidth="54.0" text="1000" />
+      <Label fx:id="vReceive" layoutX="403.0" layoutY="411.0" prefHeight="30.0" prefWidth="54.0" text="1000" />
+      <Label fx:id="vchange" layoutX="403.0" layoutY="454.0" prefHeight="30.0" prefWidth="54.0" text="1000" />
+   </children>
+</AnchorPane>

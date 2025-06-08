@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Gamer Login </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('./img/game_background.avif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(63, 59, 59, 0.3);
+      z-index: -1;
+    }
+
+    .login-box {
+      background: transparent;
+      border: 2px solid #53354A;
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #53354A;
+      color: #222020;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Orbitron', sans-serif;
+      /* -webkit-text-fill-color: #f52303; */
+      -webkit-text-fill-color: #161515;
+      color: #ff3c3c;
+      text-shadow: 1px 1px 3px rgba(158, 52, 52, 0.8);
+
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .input-group input {
+    width: 100%;
+    padding: 12px 12px 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #222020; 
+    color: #222020;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  pointer-events: none;
+  color: #222020;
+  transition: 0.3s ease;
+  background: transparent;
+  padding: 0 4px;
+}
+
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  outline: none;
+  background-color: transparent;
+  bottom: 36px;
+  font-size: 12px;
+  color: #222020;
+}
+
+
+.toggle-password {
+  position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #E84545;
+    
+}
+
+button {
+  width: 100%;
+      padding: 12px;
+      background: #EA2F14;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      
+}
+
+    button:hover {
+      background: #f52303;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup a {
+      font-size: 15px;
+      font-weight: 800;
+      color: #E84545;
+      text-decoration: none;
+    }
+
+    .signup a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <form class="login-box">
+    <h2>Login</h2>
+    <div class="input-group">
+      <input type="text" id="username" required placeholder=" " />
+      <label for="username">Username</label>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" required placeholder=" " />
+      <label for="password">Password</label>
+      <span class="toggle-password"><i class="fas fa-lock icon"></i> </span>
+    </div>
+    <button type="submit">Login</button>
+    <div class="signup">Don't have an account? <a href="#">  Sign up</a></div>
+  </form>
+
+  
+</body>
+</html>

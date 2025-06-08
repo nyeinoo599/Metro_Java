@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Profile - Gaming Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0b0b;
+      color: #dcdcdc;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #111;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      color: #00ADB5;
+      height: 100vh;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+      font-size: 1.8em;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar nav ul li {
+      margin-bottom: 25px;
+    }
+
+    .sidebar nav ul li a {
+      color: #00ADB5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .sidebar nav ul li a i {
+      margin-right: 8px;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 35px;
+      background: #161616;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 25px 30px;
+      width: 420px;
+      box-shadow: 0 0 12px #00ffc355;
+      text-align: left;
+      overflow-y: auto;
+      max-height: 95vh;
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    .card-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00ADB5;
+      margin-bottom: 0px;
+    }
+
+    .card-header h2 {
+      color: #00ADB5;
+      margin: 5px 0;
+    }
+
+    .card-info p {
+      margin: 10px 0;
+      font-size: 0.95em;
+      color: #ccc;
+    }
+
+    .card-info i {
+      color: #00ADB5;
+      margin-right: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #000;
+    }
+
+    .vip {
+      background-color: #00ff99;
+    }
+
+    
+
+    .actions {
+      margin-top: 17px;
+      text-align: center;
+    }
+
+    .actions button {
+      background: #00ADB5;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .actions button i {
+      margin-right: 5px;
+    }
+
+    .actions button:hover {
+      background: #00cfa5;
+    }
+
+    .comment-section {
+      margin-top: 22px;
+    }
+
+    .comment-section label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #00ADB5;
+    }
+
+    .comment-section textarea {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      background: #2c2c2c;
+      border: 1px solid #00ADB5;
+      color: #dcdcdc;
+      padding: 10px;
+      font-family: inherit;
+      resize: none;
+    }
+
+    .comment-section button {
+      margin-top: 10px;
+      background: #00ffc3;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .comment-section button:hover {
+      background: #00cfa5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2><i class="fas fa-gamepad"></i> Center</h2>
+  <nav>
+    <ul>
+      <li><a href="#"><i class="fas fa-users"></i> All Customers</a></li>
+      <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="content">
+  <div class="card">
+    <div class="card-header">
+      <img src="./img/user.jpeg" alt="Mya Mya">
+      <h2>Mya Mya</h2>
+      <span class="badge vip">VIP</span>
+    </div>
+
+    <div class="card-info">
+      <p><i class="fas fa-user"></i> <strong>Full Name:</strong> Mya Mya</p>
+      <p><i class="fas fa-star"></i> <strong>Rating:</strong> 4.5</p>
+      <p><i class="fas fa-calendar-alt"></i> <strong>Member Since:</strong> Jan 2022</p>
+      <p><i class="fas fa-signal"></i> <strong>Status:</strong> Online</p>
+      <p><i class="fas fa-gamepad"></i> <strong>Favorite Game:</strong> Apex Legends</p>
+      <p><i class="fas fa-desktop"></i> <strong>PC Number:</strong> 03</p>
+      <p><i class="fas fa-clock"></i> <strong>Last Login:</strong> June 7, 2025 - 2:35 PM</p>
+    </div>
+
+    
+
+    <div class="comment-section">
+      <label for="comment"><i class="fas fa-comment-dots"></i> Feedback:</label>
+      <textarea id="comment" placeholder=" Game service is good...“The game service is excellent, fast PC startup, and friendly staff.”" readonly></textarea>
+    </div>
+
+    <div class="actions">
+      <button><i class="fas fa-edit"></i> Edit</button>
+      <button><i class="fas fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

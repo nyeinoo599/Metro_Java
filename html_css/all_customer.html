@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Customers - Gaming Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0b0b;
+      color: #e4e4e4;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #111;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      color: #00ADB5;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 40px 0;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar nav ul li {
+      margin-bottom: 25px;
+    }
+
+    .sidebar nav ul li a {
+      color: #00ADB5;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .sidebar nav ul li a i {
+      margin-right: 8px;
+    }
+
+    .sidebar nav ul li a:hover {
+      color: #44ffd2;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 40px;
+      flex-grow: 1;
+      background: #161616;
+    }
+
+    .content h1 {
+      color: #00ADB5;
+      margin-bottom: 30px;
+    }
+
+    .customer-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 12px #00ffc355;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00ADB5;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-size: 1.2em;
+      color: #00ADB5;
+    }
+
+    .card p {
+      margin: 4px 0;
+      color: #bbb;
+      font-size: 0.95em;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 16px;
+      font-size: 0.8em;
+      font-weight: bold;
+      margin-top: 8px;
+      color: #000;
+    }
+
+    .badge.vip { background: #00ff99; }
+    .badge.member { background: #00b3ff; }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2><i class="fas fa-gamepad"></i> Online Gaming </h2>
+  <nav>
+    <ul>
+      <li><a href="#"><i class="fas fa-users"></i> All Customers</a></li>
+      <li><a href="#"><i class="fas fa-user-plus"></i> Add Customer</a></li>
+      <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="content">
+  <h1><i class="fas fa-users"></i> All Customers</h1>
+  <div class="customer-list">
+    <div class="card">
+      <img class="avatar" src="./img/user.jpeg" alt="Mya Mya">
+      <h2>Mya Mya</h2>
+      <p><i class="fas fa-star"></i> Rating: 4.5</p>
+      <p><i class="fas fa-gamepad"></i> Apex Legends</p>
+      <span class="badge vip">VIP</span>
+    </div>
+    <div class="card">
+      <img class="avatar" src="./img/user2.jpeg" alt="John">
+      <h2>John</h2>
+      <p><i class="fas fa-star"></i> Rating: 4.0</p>
+      <p><i class="fas fa-gamepad"></i> Fortnite</p>
+      <span class="badge member">Member</span>
+    </div>
+    <div class="card">
+      <img class="avatar" src="./img/user3.jpeg" alt="Phelix">
+      <h2>Phelix</h2>
+      <p><i class="fas fa-star"></i> Rating: 3.8</p>
+      <p><i class="fas fa-gamepad"></i> Valorant</p>
+      <span class="badge member">Member</span>
+    </div>
+    <div class="card">
+      <img class="avatar" src="./img/user4.avif" alt="Nightmare">
+      <h2>Nightmare</h2>
+      <p><i class="fas fa-star"></i> Rating: 4.5</p>
+      <p><i class="fas fa-gamepad"></i> Apex Legends</p>
+      <span class="badge vip">VIP</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
